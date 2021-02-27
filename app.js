@@ -51,7 +51,8 @@ app.use((error, req, res, next) => {
 
 app.use('/graphql', graphqlHTTP({
   schema: graphqlSchema,
-  rootValue: graphqlResolver
+  rootValue: graphqlResolver,
+  graphiql: true
 }));
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {useUnifiedTopology: true, useNewUrlParser: true})
