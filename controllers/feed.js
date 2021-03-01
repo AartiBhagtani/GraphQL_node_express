@@ -211,7 +211,6 @@ exports.updateUserStatus = async (req, res, next) => {
   }
 }
 
-
 const clearImage = filePath => {
   filepath = path.join(__dirname, '..', filePath);
   fs.unlink(filepath, err => {console.log(err)});
